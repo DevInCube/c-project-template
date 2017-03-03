@@ -3,10 +3,10 @@
 	"clang.cflags": [
 		"-I./include",
 		"-I./../include",
+		"-c",
 		"-std=c11",
 		"-Werror",
 		"-Wall",
-		"-pedantic-errors",
 		"-fms-extensions"
 	]
 }
