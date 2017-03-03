@@ -1,0 +1,12 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+	"clang.cflags": [
+		"-I./include",
+		"-I./../include",
+		"-std=c11",
+		"-Werror",
+		"-Wall",
+		"-pedantic-errors",
+		"-fms-extensions"
+	]
+}
