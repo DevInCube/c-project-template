@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 2.8.9)
-project (proj)
-add_executable(proj main.c)
+project (mycsv)
+
+# add_executable(proj main.c)
 
 # adds ./include to compiler include directories
 include_directories(include)
@@ -10,6 +11,19 @@ include_directories(include)
 
 # compiles code files from ./src folder
 file(GLOB SOURCES "src/*.c")
+
+# to build static lib
+add_library(mycsv STATIC ${SOURCES})
+
+# install library headers
+install(
+    DIRECTORY include/     DESTINATION /usr/local/include
+        FILES_MATCHING PATTERN "*.h"
+)
+
+#Set the location for library installation -- i.e., /usr/local/lib in this case
+# not really necessary in this example. Use "sudo make install" to apply
+install(TARGETS mycsv DESTINATION /usr/local/lib)
 
 # uncomment this to link libxml2 XML library
 # target_link_libraries(proj libxml2.so)

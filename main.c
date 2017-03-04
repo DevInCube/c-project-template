@@ -1,9 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include <module.h>
+#include <csv.h>
 
 int main(void) {
-	puts("OK");
+	CsvDoc * doc = CsvDoc_newFromFile("test.txt");
+	CsvDoc_writeToFile("test2.txt");
+	CsvDoc_free(&doc);
 	return 0;
 }
