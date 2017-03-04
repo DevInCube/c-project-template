@@ -4,7 +4,7 @@
 #include <module.h>
 
 int main(void) {
-	puts("Main():");
+	puts("Test()");
 	Module_print();
 	return 0;
 }

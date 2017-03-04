@@ -3,4 +3,6 @@
 
 // paste your module interface here
 
+void Module_print(void);
+
 #endif
