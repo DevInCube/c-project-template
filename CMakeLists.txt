@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.9)
 project (mycsv)
 
-# add_executable(proj main.c)
+# add_executable(${CMAKE_PROJECT_NAME} main.c)
 
 # adds ./include to compiler include directories
 include_directories(include)
@@ -26,7 +26,7 @@ install(
 install(TARGETS ${CMAKE_PROJECT_NAME} DESTINATION /usr/local/lib)
 
 # uncomment this to link libxml2 XML library
-# target_link_libraries(proj libxml2.so)
+# target_link_libraries(${CMAKE_PROJECT_NAME} libxml2.so)
 
 # uncomment this to link jansson JSON library
-# target_link_libraries(proj libjansson.so)
+# target_link_libraries(${CMAKE_PROJECT_NAME} libjansson.so)
